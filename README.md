@@ -1,7 +1,7 @@
 # AddressBook
 Add , Delete &amp; View Address
 <br>
-Author-Haneesh Hasan
+Author - Haneesh Hasan
 <br>
 Programming languages used: 
 <br>
