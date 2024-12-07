@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Contacts - Address Book</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content container">
+            <div class="header-left">
+                <h1>Address Book</h1>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="ph-sun"></i>
+                    <span>Light Mode</span>
+                </button>
+            </div>
+            <nav>
+                <button class="nav-btn" onclick="location.href='index.html'">
+                    <i class="ph-house"></i>
+                    Home
+                </button>
+                <button class="nav-btn" onclick="location.href='add.html'">
+                    <i class="ph-plus-circle"></i>
+                    Add Contact
+                </button>
+                <button class="nav-btn active" onclick="location.href='view.html'">
+                    <i class="ph-address-book"></i>
+                    View Contacts
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container">
+        <div class="welcome-section">
+            <h2>Contact List</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search contacts...">
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table id="contactList">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example rows - replace with dynamic data -->
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>+1 234-567-8900</td>
+                        <td>123 Main St, City</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-edit" onclick="editContact(this)">
+                                    <i class="ph-pencil"></i>
+                                    Edit
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="ph-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jane</td>
+                        <td>Smith</td>
+                        <td>jane.smith@example.com</td>
+                        <td>+1 234-567-8901</td>
+                        <td>456 Oak Ave, Town</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-edit" onclick="editContact(this)">
+                                    <i class="ph-pencil"></i>
+                                    Edit
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="ph-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Michael</td>
+                        <td>Johnson</td>
+                        <td>michael.j@example.com</td>
+                        <td>+1 234-567-8902</td>
+                        <td>789 Pine Rd, Village</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-edit" onclick="editContact(this)">
+                                    <i class="ph-pencil"></i>
+                                    Edit
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="ph-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sarah</td>
+                        <td>Williams</td>
+                        <td>sarah.w@example.com</td>
+                        <td>+1 234-567-8903</td>
+                        <td>321 Elm St, County</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-edit" onclick="editContact(this)">
+                                    <i class="ph-pencil"></i>
+                                    Edit
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="ph-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Robert</td>
+                        <td>Brown</td>
+                        <td>robert.b@example.com</td>
+                        <td>+1 234-567-8904</td>
+                        <td>654 Maple Dr, State</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-edit" onclick="editContact(this)">
+                                    <i class="ph-pencil"></i>
+                                    Edit
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="ph-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Emily</td>
+                        <td>Davis</td>
+                        <td>emily.d@example.com</td>
+                        <td>+1 234-567-8905</td>
+                        <td>987 Cedar Ln, District</td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-edit" onclick="editContact(this)">
+                                    <i class="ph-pencil"></i>
+                                    Edit
+                                </button>
+                                <button class="btn-delete">
+                                    <i class="ph-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Empty state message -->
+                    <tr class="empty-state" id="emptyState" style="display: none;">
+                        <td colspan="6">
+                            <i class="ph-users ph-3x"></i>
+                            <p>No contacts found. Add some contacts to see them here.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>Address Book. Copyright 2024</p>
+        </div>
+    </footer>
+
+    <!-- Add this line just before the closing </body> tag -->
+    <script src="app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Contact - Address Book</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content container">
+            <div class="header-left">
+                <h1>Address Book</h1>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="ph-sun"></i>
+                    <span>Light Mode</span>
+                </button>
+            </div>
+            <nav>
+                <button class="nav-btn" onclick="location.href='index.html'">
+                    <i class="ph-house"></i>
+                    Home
+                </button>
+                <button class="nav-btn" onclick="location.href='add.html'">
+                    <i class="ph-plus-circle"></i>
+                    Add Contact
+                </button>
+                <button class="nav-btn" onclick="location.href='view.html'">
+                    <i class="ph-address-book"></i>
+                    View Contacts
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container">
+        <div class="form-container">
+            <form id="editContact">
+                <h2>Edit Contact</h2>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary">
+                        <i class="ph-check"></i>
+                        Update Contact
+                    </button>
+                    <button type="reset" class="btn-primary">
+                        <i class="ph-eraser"></i>
+                        Clear
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>Address Book. Copyright 2024</p>
+        </div>
+    </footer>
+
+    <!-- Add this just before the closing </body> tag -->
+    <script src="app.js"></script>
+</body>
+</html> 

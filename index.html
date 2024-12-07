@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content container">
+            <div class="header-left">
+                <h1>Address Book</h1>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="ph-sun"></i>
+                    <span>Light Mode</span>
+                </button>
+            </div>
+            <nav>
+                <button class="nav-btn active" onclick="location.href='index.html'">
+                    <i class="ph-house"></i>
+                    Home
+                </button>
+                <button class="nav-btn" onclick="location.href='add.html'">
+                    <i class="ph-plus-circle"></i>
+                    Add Contact
+                </button>
+                <button class="nav-btn" onclick="location.href='view.html'">
+                    <i class="ph-address-book"></i>
+                    View Contacts
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container">
+        <div class="welcome-section">
+            <h2>Welcome to Address Book application</h2>
+            <p class="subtitle">You can add, delete, search and view contacts here</p>
+        </div>
+        
+        <div class="card-container">
+            <div class="card">
+                <i class="ph-user-plus card-icon"></i>
+                <h3>Add New Contact</h3>
+                <p>Add a new contact to your address book with details like name, email, phone, and address.</p>
+                <button class="btn-primary" onclick="location.href='add.html'">
+                    <i class="ph-plus"></i>
+                    Add Contact
+                </button>
+            </div>
+            
+            <div class="card">
+                <i class="ph-users card-icon"></i>
+                <h3>View Contacts</h3>
+                <p>View all your contacts, search through them, and manage your address book.</p>
+                <button class="btn-primary" onclick="location.href='view.html'">
+                    <i class="ph-list"></i>
+                    View Contacts
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>Address Book. Copyright 2024</p>
+        </div>
+    </footer>
+
+    <!-- Add this just before the closing </body> tag -->
+    <script src="app.js"></script>
+</body>
+</html> 
