@@ -37,10 +37,40 @@ one below the other.
  -edit.html- A form with the same fields as in add.html name editContact- The form must be aligned in the center of the page.- The header and footer must be same as in index.html- The form must be prefilled with the contact data to be edited
 
 
- Back end:
- Servlet
- JSP
+Back end:- 
+Create a model class (POJO) called Contact with the following fields: 
+- id (primary key)
+- firstName
+- lastName
+- email
+- phone
+- address
+- notes
+
+- Create a DAO class called ContactDAO with the following methods:
+- addContact(Contact contact)
+- deleteContact(int id)
+- getContactById(int id)
+- getAllContacts()
+- updateContact(Contact contact)
+- also make sure the dao class has the jdbc connection code to connect to the database
+- i am using mysql connector jar file to connect to the database
+- username: 
+- password: root
+- dont forget to use class.forname() to load the mysql connector jar file
+
+ Servlet:-
+   JSP
  JDBC
 
- 
-Database:- MySQ
+ Database:- 
+ MySQL
+ - create a database called addressbook-create a table called contacts with the following columns:
+ - id (primary key)
+ - firstName
+ - lastName
+ - email
+ - phone
+ - address
+ - notes
+ - 5 rows of data must be inserted in the table 
