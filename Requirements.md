@@ -61,7 +61,7 @@ Create a model class (POJO) called Contact with the following fields:
 
  Servlet:-
    JSP
- JDBC
+   JDBC
 
  Database:- 
  MySQL
