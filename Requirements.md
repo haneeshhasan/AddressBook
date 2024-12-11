@@ -36,7 +36,9 @@ one below the other.
  - Phone
  - Address
  - notes
- - A submit button- A clear button- The form must be aligned in the center of the page.
+ - A submit button
+ - A clear button
+ - The form must be aligned in the center of the page.
  the header and footer must be same as in index.html
 
  - view.html- A table called as contactListwith the following columns:- First Name- Last Name- Email- Phone- Address- Action (Delete) (Edit)- The table must be aligned in the center of the page.- The header and footer must be same as in index.html
